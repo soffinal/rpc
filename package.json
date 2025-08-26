@@ -1,0 +1,14 @@
+{
+  "name": "rpc",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@soffinal/stream": "^0.2.0"
+  }
+}
