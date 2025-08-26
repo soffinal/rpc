@@ -1,6 +1,11 @@
 import { Stream, filter, map } from "@soffinal/stream";
 import type { Action } from "./action.ts";
 
+/**
+ * Type-safe RPC client with reactive streams for each action.
+ *
+ * @template ACTIONS - Record of server actions (import from server)
+ */
 export type Client<ACTIONS extends Record<string, Action<any, any, any, any>>> = {
   [K in keyof ACTIONS]: Client.ActionObject<ACTIONS[K]>;
 } & {

@@ -12,7 +12,7 @@ await Bun.build({
 });
 
 // Build TypeScript declarations
-await Bun.$`bunx tsc --emitDeclarationOnly --allowImportingTsExtensions --noEmit false`;
+await Bun.$`bunx tsc src/**/*.ts --emitDeclarationOnly --declaration --declarationMap --outDir ./dist --moduleResolution bundler --target ES2020 --module ESNext --allowImportingTsExtensions --skipLibCheck`;
 
 // Release functionality
 if (process.argv.includes("--release")) {

@@ -1,6 +1,9 @@
 {
   "name": "@soffinal/rpc",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Universal type-safe RPC with reactive streams for any transport boundary",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

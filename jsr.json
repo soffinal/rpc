@@ -1,6 +1,6 @@
 {
   "name": "@soffinal/rpc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Universal type-safe RPC with reactive streams for any transport boundary",
   "license": "MIT",
   "repository": {
@@ -11,14 +11,6 @@
     ".": "./src/index.ts"
   },
   "publish": {
-    "exclude": [
-      "src/test/**/*",
-      "**/*.test.ts",
-      "**/*.spec.ts",
-      "dist/",
-      "node_modules/",
-      ".git/",
-      "bun.lockb"
-    ]
+    "exclude": ["src/test/**/*", "**/*.test.ts", "**/*.spec.ts", "dist/", "node_modules/", ".git/", "bun.lockb"]
   }
 }

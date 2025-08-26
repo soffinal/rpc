@@ -1,3 +1,11 @@
+/**
+ * Type definition for RPC actions with context, arguments, and response types.
+ *
+ * @template CTX - Context type required by this action (use `undefined` if no context needed)
+ * @template ARGS - Array of argument types for this action
+ * @template DATA - Success response data type
+ * @template ERROR - Error response type
+ */
 export type Action<CTX, ARGS extends any[], DATA, ERROR> = (
   context: CTX,
   ...args: ARGS
