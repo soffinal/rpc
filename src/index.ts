@@ -26,5 +26,5 @@
  * ```
  */
 
-export * from "./action";
-export * from "./client";
+export * from "./action.ts";
+export * from "./client.ts";
