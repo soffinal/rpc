@@ -1,14 +1,59 @@
 {
-  "name": "rpc",
-  "module": "index.ts",
+  "name": "@soffinal/rpc",
+  "version": "0.1.0",
+  "description": "Universal type-safe RPC with reactive streams for any transport boundary",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run build.ts",
+    "dev": "tsc --watch",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "rpc",
+    "typescript",
+    "type-safe",
+    "reactive",
+    "streams",
+    "universal",
+    "transport",
+    "websocket",
+    "worker",
+    "http",
+    "client-server"
+  ],
+  "author": "Soffinal <smari.sofiane@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soffinal/rpc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soffinal/rpc/issues"
+  },
+  "homepage": "https://github.com/soffinal/rpc#readme",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
   },
   "dependencies": {
     "@soffinal/stream": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
