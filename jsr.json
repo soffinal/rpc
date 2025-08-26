@@ -1,6 +1,6 @@
 {
   "name": "@soffinal/rpc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Universal type-safe RPC with reactive streams for any transport boundary",
   "license": "MIT",
   "repository": {
