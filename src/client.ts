@@ -33,6 +33,11 @@ export type Client<ACTIONS extends Record<string, Action<any, any, any, any>>> =
 };
 
 export namespace Client {
+  /**
+   * Type for client action objects that are both callable functions and have reactive streams.
+   *
+   * @template T - Action type to extract arguments and response types from
+   */
   export type ActionObject<T extends Action<any, any, any, any>> = T extends Action<
     any,
     infer ARGS,
@@ -46,6 +51,13 @@ export namespace Client {
       }
     : never;
 
+  /**
+   * Action response with action name for stream filtering and identification.
+   *
+   * @template ACTION_NAME - Name of the action that generated this response
+   * @template DATA - Success response data type
+   * @template ERROR - Error response type
+   */
   export type ActionResponse<ACTION_NAME, DATA, ERROR> = Action.Response<DATA, ERROR> & { actionName: ACTION_NAME };
 
   /**

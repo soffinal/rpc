@@ -12,9 +12,25 @@ export type Action<CTX, ARGS extends any[], DATA, ERROR> = (
 ) => Action.Response<DATA, ERROR> | void | Promise<Action.Response<DATA, ERROR> | void>;
 
 export namespace Action {
+  /**
+   * Error types that can be returned by Action.handle when processing fails.
+   */
   export type HandleError = "action-not-found" | "unknown";
 
+  /**
+   * RPC request structure with action name and arguments.
+   *
+   * @template ACTION - Action name as string literal
+   * @template ARGS - Array of argument types
+   */
   export type Request<ACTION extends string, ARGS extends any[]> = { action: ACTION; args?: ARGS };
+  
+  /**
+   * RPC response structure as discriminated union of success or error.
+   *
+   * @template DATA - Success response data type
+   * @template ERROR - Error response type
+   */
   export type Response<DATA, ERROR> = { data: DATA; error?: never } | { data?: never; error: ERROR };
 
   /**
